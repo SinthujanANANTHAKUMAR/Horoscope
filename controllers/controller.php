@@ -4,10 +4,20 @@ switch ($action)
     case 'reponse':
         {
             var_dump($_REQUEST);
-            echo $signe["Sagittaire"];
-            $liste=$_REQUEST['nom'];
+            $liste=$_REQUEST['liste'];
+            echo $signe[$liste];
+ 
             break;
         }
+        case 'connexion':{
+            var_dump($_REQUEST);
+            $username=$_REQUEST['username'];
+            $password=$_REQUEST['password'];
+            
+            break;
+        }
+            
     default:
-    {include 'views/choix.php';}
+    {include 'views/connexion.php';}
 }
+

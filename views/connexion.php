@@ -13,7 +13,7 @@
         <input type="password" id="password" name="password" required><br><br>
 
         <input type="submit" value="valider">
-        
+         
     </form>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 $signe= array(
-    "Bélier" => "Vous dezvez faire les efforts les plus sérieux pour acquérir un bon niveau.",
+    "Bélier" => "Vous devez faire les efforts les plus sérieux pour acquérir un bon niveau.",
     "Taureau" => "Une de vos plus grandes qualités est la capacité de saisir les théories.",
     "Gémeaux" => "De temps à autre, admettez que vous n'êtes pas le seul à raisonner avec logique.",
     "Cancer" => "La rapidité de votre intelligence risque de vous entraîner à négliger certains détails.",
@@ -13,7 +13,6 @@ $signe= array(
     "Verseau" => "Ce travail vous demandera beaucoup d'ingéniosité.",
     "Poissons" => "Votre esprit vif et limpide facilite la résolution des problèmes."
 );
-
     $login=array(
         1=>array('toto'=>'1234'),
         2=>array('titi'=> '456'),

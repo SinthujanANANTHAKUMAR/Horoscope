@@ -4,12 +4,11 @@ switch ($action)
     case 'reponse':
         {
             var_dump($_REQUEST);
-            $liste=$_REQUEST['liste'];           
+            $liste=$_REQUEST['liste'];
             include 'views/reponse.php';
             break;
         }
         case 'connexion':{
-            var_dump($_REQUEST);
             $username=$_REQUEST['username'];
             $password=$_REQUEST['password'];
             $flag = false;
@@ -28,6 +27,18 @@ switch ($action)
             break;
             
         }
+
+        case 'modifier':{  
+            
+            include 'views/admin.php';
+            break;
+        }
+
+        case 'administrer':{
+            var_dump($_REQUEST);
+            break;
+        }
+           
             
     default:
     {include 'views/connexion.php';}

@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+<a href="index.php?action=modifier">Administrer</a>
 <form method ="POST" action="index.php?action=reponse">
 <select name="liste" size="1">
     <?php

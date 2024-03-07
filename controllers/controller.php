@@ -5,20 +5,17 @@ switch ($action)
         {
             var_dump($_REQUEST);
             $liste=$_REQUEST['liste'];
+            $texte= getLeSigne($liste);
             include 'views/reponse.php';
             break;
         }
         case 'connexion':{
             $username=$_REQUEST['username'];
             $password=$_REQUEST['password'];
-            $flag = false;
-            foreach ($login as $userId => $userData){
-            if(isset($userData[$username]) && $userData[$username]== $password)
-            {
-                $flag=true;
-            }
-            }
+            $flag = getConnexion($username,$password);
+            
             if ($flag){
+                $signe = getLesSignes();
                 include 'views/choix.php';
             }
             else{

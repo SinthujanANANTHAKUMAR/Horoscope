@@ -26,7 +26,7 @@ switch ($action)
         }
 
         case 'modifier':{  
-            
+            $signe = signe();
             include 'views/admin.php';
             break;
         }

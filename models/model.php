@@ -1,16 +1,10 @@
 <?php
 include 'models/data.php';
-    function getConnexion($username,$password){
-                $login = connexion();
-                $flag = false;
-                foreach ($login as $userId => $userData){
-                if(isset($userData[$username]) && $userData[$username]== $password)
-                {
-                    $flag=true;
-                }
-                }
-             return $flag;   
-    }
+        function getConnexion($username,$password){
+            $sql="SELECT COUNT(*) FROM connexion WHERE username='$username' and password='$password'";
+            return executerRequete($sql)->fetchAll();
+        }
+         
     
     function getLesSignes(){
         $signe = signe();
@@ -20,6 +14,6 @@ include 'models/data.php';
     
     function getLeSigne($liste){
                $signe = signe(); 
-             echo $signe[$liste];
+             return $signe[$liste];
     }
     

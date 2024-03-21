@@ -10,8 +10,8 @@
 <a href="index.php?action=modifier">Administrer</a>
 <form method ="POST" action="index.php?action=reponse">
 <select name="liste" size="1">
-    <?php
-    foreach($signe as $k=>$v): ?>
+<?php
+    foreach( $signe as $k=>$v): ?>
     <option value="<?= $k ?>"><?= $k  ?></option>
    <?php endforeach ?>
    <input type="submit" value="OK" />

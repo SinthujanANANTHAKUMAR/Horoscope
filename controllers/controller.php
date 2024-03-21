@@ -15,7 +15,14 @@ switch ($action)
             $flag = getConnexion($username,$password);
             
             if ($flag){
-                $signe = getLesSignes();
+                
+                $data = getLesSignes();
+                
+                $signe[$data[0]['signe']]=$data[0]['horoscope'];
+                foreach ($data as $k): 
+                    $signe[$data['signe']]=$data['horoscope'];
+                endforeach;
+                var_dump($data);
                 include 'views/choix.php';
             }
             else{

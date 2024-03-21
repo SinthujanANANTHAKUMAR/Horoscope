@@ -7,13 +7,13 @@ include 'models/data.php';
          
     
     function getLesSignes(){
-        $signe = signe();
-        return $signe;
+        $sql="SELECT * from astrologie ";
+        return executerRequete($sql)->fetchAll();
     }
     
     
     function getLeSigne($liste){
-               $signe = signe(); 
-             return $signe[$liste];
+        $sql="SELECT horoscope='$liste' from astrologie";
+        return executerRequete($sql)->fetchAll();
     }
     

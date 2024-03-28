@@ -5,24 +5,24 @@ switch ($action)
         {
             var_dump($_REQUEST);
             $liste=$_REQUEST['liste'];
-            $texte= getLeSigne($liste);
+            $horoscopes= getLeSigne($liste);
+            var_dump($horoscopes);
+            $horoscope=$horoscopes['horoscope'];
             include 'views/reponse.php';
+            
             break;
         }
         case 'connexion':{
             $username=$_REQUEST['username'];
             $password=$_REQUEST['password'];
             $flag = getConnexion($username,$password);
-            
-            if ($flag){
-                
-                $data = getLesSignes();
-                
-                $signe[$data[0]['signe']]=$data[0]['horoscope'];
-                foreach ($data as $k): 
-                    $signe[$data['signe']]=$data['horoscope'];
-                endforeach;
-                var_dump($data);
+            var_dump($flag);
+
+            if ($flag['nb']==1){
+
+                 $signe = getLesSignes();
+               
+
                 include 'views/choix.php';
             }
             else{
@@ -33,7 +33,7 @@ switch ($action)
         }
 
         case 'modifier':{  
-            $signe = signe();
+            $signe = getLesSignes();
             include 'views/admin.php';
             break;
         }
